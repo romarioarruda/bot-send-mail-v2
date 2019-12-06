@@ -10,8 +10,8 @@ response = requests.get('https://api.github.com/users/romarioarruda')
 data = response.json()
 
 
-from_addr = 'romarioarruda98@gmail.com'
-to_addr   = 'romarioarruda98@gmail.com'
+from_addr = 'email@example1'
+to_addr   = 'email@example2'
 
 msg = MIMEMultipart()
 
@@ -70,7 +70,7 @@ smtp = smtplib.SMTP('smtp.gmail.com', 587)
 smtp.starttls()
 
 #Login on account user
-smtp.login(from_addr, 'romario09')
+smtp.login(from_addr, 'your pass')
 
 #string converting
 text = msg.as_string()
